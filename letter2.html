@@ -212,12 +212,12 @@ if (!canvas.getContext) {
     function typeWriter(text, element, i = 0) {
       if (i < text.length) {
         element.innerHTML += text.charAt(i);
-        setTimeout(() => typeWriter(text, element, i + 1), 50);
+        setTimeout(() => typeWriter(text, element, i + 1), 100);
       }
     }
 
     function showLetter() {
-      let letterText = `你好啊梦梦,\n(🎵此刻响起的音乐是从米兰电影的小镇伯出)\n当你解开最后一个谜题时,我想此刻的你大概正微微挑起眉毛,带着那副“不过如此”的冷静表情,却又偷偷扬起一点嘴角——就像我们第一次在东京迪士尼遇到时,你走向穿着天线宝宝衣服的我们那样。\n\nForever grateful to have met you.\n\nSincerely,\n礼澳`;
+      let letterText = `(🎵此刻响起的音乐是从米兰电影的小镇伯出)\n你好啊梦梦,\n当你解开最后一个谜题时,我想此刻的你大概正微微挑起眉毛,带着那副“不过如此”的冷静表情,却又偷偷扬起一点嘴角——就像我们第一次在东京迪士尼遇到时,你走向穿着天线宝宝衣服的我们那样。\n\nForever grateful to have met you.\n\nSincerely,\n礼澳`;
       let letterElement = document.getElementById("letter");
       letterElement.style.display = "block";
       letterElement.innerHTML = "<span class='typing'></span>";
