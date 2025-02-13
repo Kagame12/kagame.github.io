@@ -27,15 +27,15 @@
     .container {
       position: relative;
       z-index: 1;
-      background: rgba(0, 0, 0, 0.6); /* Transparent */
-      padding: 8px; /* Smaller padding */
+      background: rgba(0, 0, 0, 0.6);
+      padding: 8px;
       border-radius: 8px;
       text-align: center;
-      width: 80%; /* Smaller width */
-      max-width: 200px; /* Maximum width reduced */
+      width: 80%;
+      max-width: 200px;
     }
     h1 {
-      font-size: 14px; /* Smaller text */
+      font-size: 14px;
     }
     p {
       font-size: 12px;
@@ -46,7 +46,7 @@
       color: #bbb;
     }
     input, button {
-      font-size: 10px; /* Smaller input & button */
+      font-size: 10px;
       padding: 6px;
       margin: 5px 0;
       width: 90%;
@@ -74,8 +74,8 @@
   <div class="container">
     <h1>Welcome, 廉梦洁!</h1>
     <p>Please enter your birthday to reveal your surprise letter:</p>
-    <input type="date" id="birthday" required>
-    <p class="hint">生日的日月 (EG: 日期/月份)</p>
+    <input type="text" id="birthday" placeholder="MM/DD/YYYY" required>
+    <p class="hint">Format: MM/DD/YYYY (e.g., 07/03/2000)</p>
     <p>Enter passcode:</p>
     <input type="text" id="passcode" placeholder="Enter passcode">
     <br>
@@ -101,16 +101,22 @@
       },
       "retina_detect": true
     });
+
     function submitForm() {
-      var birthday = document.getElementById("birthday").value;
+      var birthday = document.getElementById("birthday").value.trim();
       var passcode = document.getElementById("passcode").value;
-      if (!birthday) {
-        alert("Please enter your birthday!");
-      } else if (passcode !== "0307") {
-        alert("Incorrect passcode!");
-      } else {
-        window.location.href = "letter2.html";
+      
+      if (birthday !== "07/03/2000") {
+        alert("Incorrect birthday format or value! Use MM/DD/YYYY.");
+        return;
       }
+
+      if (passcode !== "0307") {
+        alert("Incorrect passcode!");
+        return;
+      }
+
+      window.location.href = "letter2.html";
     }
   </script>
 </body>
