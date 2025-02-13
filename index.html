@@ -104,13 +104,24 @@
     function submitForm() {
       var birthday = document.getElementById("birthday").value;
       var passcode = document.getElementById("passcode").value;
+      
       if (!birthday) {
         alert("别吓我！连自己的生日都不记得吗! Use MM/DD/YYYY.");
-      } else if (passcode !== "瑞士") {
-        alert("这都能忘了吗！那边的风景好美啊");
-      } else {
-        window.location.href = "letter2.html";
+        return;
       }
+      
+      var correctBirthday = "2000-07-03"; // YYYY-MM-DD format
+      if (birthday !== correctBirthday) {
+        alert("生日输入错误哦! 再想想！");
+        return;
+      }
+      
+      if (passcode !== "瑞士") {
+        alert("这都能忘了吗！那边的风景好美啊");
+        return;
+      }
+      
+      window.location.href = "letter2.html";
     }
   </script>
 </body>
