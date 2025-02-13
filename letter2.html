@@ -170,7 +170,7 @@ if (!canvas.getContext) {
 
     const matrixChars = [
       "こんにちは", "爱してる", "廉", "梦", "洁", "拉拉", "丁丁", "迪斯", "小波", "迪斯尼", "日本",
-      "武汉", "新加波", "AESPA", "GIDLE", "NEWJEANS", "DISNEY", "塔罗","瘦野","SAKE"
+      "武汉", "新加波", "AESPA", "GIDLE", "NEWJEANS", "DISNEY", "塔罗","瘦野","SAKE","玫瑰"
     ];
 
     const fontSize = 12;
@@ -198,7 +198,7 @@ if (!canvas.getContext) {
         if (drops[i] * fontSize * verticalSpacingFactor > canvas.height && Math.random() > 0.995) {
           drops[i] = 0.5;
         }
-        drops[i] += 0.25;
+        drops[i] += 0.2;
       }
     }
     setInterval(drawMatrix, 50);
