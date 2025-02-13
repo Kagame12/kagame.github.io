@@ -225,7 +225,9 @@ if (!canvas.getContext) {
 
     function playMusic() {
       let music = document.getElementById("bg-music");
-      music.play();
+      music.play().catch(error => {
+        console.log("Autoplay blocked, waiting for user interaction.");
+    });;
     }
 
     function showChestEffect() {
