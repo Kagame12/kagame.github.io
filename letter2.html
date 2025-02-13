@@ -163,7 +163,7 @@ if (!canvas.getContext) {
       "武汉", "新加波", "AESPA", "GIDLE", "NEWJEANS", "DISNEY", "塔罗","瘦野","SAKE"
     ];
 
-    const fontSize = 10;
+    const fontSize = 12;
     const columnSpacing = fontSize * 8;
     const columns = Math.floor(canvas.width / columnSpacing);
     const drops = Array.from({ length: columns }, () => Math.random() * canvas.height);
@@ -205,7 +205,7 @@ if (!canvas.getContext) {
     }
 
     function showLetter() {
-      let letterText = `Dear Dream,\n\nYou are my happiest thought and my favorite story to tell. I'm grateful for every moment we share, and I hope this little surprise makes you smile.\n\nForever grateful to have met you.\n\nSincerely,\nYour Name`;
+      let letterText = `Dear Dream,\n\nYou are my happiest thought and my favorite story to tell. I'm grateful for every moment we share, and I hope this little surprise makes you smile.\n\nForever grateful to have met you.\n\nSincerely,\n礼澳`;
       let letterElement = document.getElementById("letter");
       letterElement.style.display = "block";
       letterElement.innerHTML = "<span class='typing'></span>";
