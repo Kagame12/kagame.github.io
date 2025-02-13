@@ -230,6 +230,8 @@ if (!canvas.getContext) {
         console.log("Autoplay blocked, waiting for user interaction.");
     });;
     }
+    // Add this after playMusic function
+document.getElementById("submit-btn").addEventListener("click", playMusic);
 
     function showChestEffect() {
       let chest = document.getElementById("chest");
