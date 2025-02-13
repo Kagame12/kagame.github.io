@@ -212,7 +212,7 @@ if (!canvas.getContext) {
     function typeWriter(text, element, i = 0) {
       if (i < text.length) {
         element.innerHTML += text.charAt(i);
-        setTimeout(() => typeWriter(text, element, i + 1), 100);
+        setTimeout(() => typeWriter(text, element, i + 1), 150);
       }
     }
 
